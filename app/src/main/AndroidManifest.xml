@@ -15,6 +15,12 @@
         android:theme="@style/Theme.NewsPractical"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.image.ImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.weview.WebviewActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.news_detail.NewsDetailActivity"
             android:exported="false" />
         <activity
