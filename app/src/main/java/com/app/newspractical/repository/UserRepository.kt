@@ -9,8 +9,8 @@ import javax.inject.Singleton
 @Singleton
 class UserRepository @Inject constructor(private val service: ApiService) {
 
-    suspend fun getNewsList(offset: Int = 10, limit: Int = 10): Response<NewsModel> {
-        return service.getNewsList(offset, limit)
+    suspend fun getNewsList(): Response<NewsModel> {
+        return service.getNewsList("google-news", "4862ca4e8f6d4774bee79ffa09b48882")
     }
 
 }

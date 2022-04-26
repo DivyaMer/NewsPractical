@@ -3,8 +3,8 @@ package com.app.newspractical.network
 object APIConstant {
 
     //http://sd2-hiring.herokuapp.com/api/users?offset=10&limit=10/
-    const val BASE_URL = "http://sd2-hiring.herokuapp.com/api/"
-    const val API_USERS = "users"
+    const val BASE_URL = "https://newsapi.org/v2/"
+    const val API_USERS = "top-headlines"
     const val PARAM_OFFSET = "offset"
     const val PARAM_LIMIT = "limit"
 

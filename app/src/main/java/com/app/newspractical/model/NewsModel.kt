@@ -1,12 +1,23 @@
 package com.app.newspractical.model
 
-import com.google.gson.annotations.SerializedName
-
-
 data class NewsModel(
-
-    @SerializedName("status") var status: String? = null,
-    @SerializedName("totalResults") var totalResults: Int? = null,
-    @SerializedName("articles") var articles: ArrayList<Articles> = arrayListOf()
-
-)
+    val articles: List<Article>,
+    val status: String,
+    val totalResults: Int
+) {
+    data class Article(
+        val author: String,
+        val content: String,
+        val description: String,
+        val publishedAt: String,
+        val source: Source,
+        val title: String,
+        val url: String,
+        val urlToImage: String
+    ) {
+        data class Source(
+            val id: String,
+            val name: String
+        )
+    }
+}

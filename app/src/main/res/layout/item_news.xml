@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.app.newspractical.ui.news_list.NewsListViewModel" />
+            type="com.app.newspractical.model.NewsModel.Article" />
 
     </data>
 
@@ -55,28 +55,32 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="title"
+                        tools:text="title"
+                        android:text="@{viewModel.title}"
                         android:textSize="30sp"
                         android:textColor="@color/black" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="sub title"
+                        tools:text="sub title"
+                        android:text="@{viewModel.author}"
                         android:textSize="15sp"
                         android:textColor="@color/black" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="date"
+                        tools:text="date"
+                        android:text="@{viewModel.publishedAt}"
                         android:textSize="20sp"
                         android:textColor="@color/black" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="date"
+                        tools:text="date"
+                        android:text="@{viewModel.url}"
                         android:textSize="20sp"
                         android:textColor="@color/black" />
 

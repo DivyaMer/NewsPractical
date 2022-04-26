@@ -1,6 +1,5 @@
 package com.app.newspractical.ui.splash
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -9,6 +8,7 @@ import com.app.newspractical.R
 import com.app.newspractical.base.BaseActivity
 import com.app.newspractical.databinding.ActivitySplashBinding
 import com.app.newspractical.ktx.startNewActivity
+import com.app.newspractical.ui.news_list.NewsListActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,7 +26,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>() {
 
     private fun moveToNext() {
         Handler(Looper.getMainLooper()).postDelayed({
-            startNewActivity(SplashActivity::class.java, true)
+            startNewActivity(NewsListActivity::class.java, true)
         }, 3000)
     }
 

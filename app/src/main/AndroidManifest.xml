@@ -15,13 +15,13 @@
         android:theme="@style/Theme.NewsPractical"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.news_detail.NewsDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.news_list.NewsListActivity"
             android:exported="false" />
         <activity
             android:name=".ui.splash.SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
