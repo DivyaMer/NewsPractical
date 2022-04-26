@@ -1,6 +1,7 @@
 package com.app.newspractical.ui.news_list.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.AdapterView

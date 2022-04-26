@@ -15,7 +15,7 @@ import com.app.newspractical.ui.weview.WebviewActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class NewsDetailActivity : BaseActivity<ActivityNewsDetailBinding, NewsListViewModel>() {
+class NewsDetailActivity : BaseActivity<ActivityNewsDetailBinding, NewsDetailViewModel>() {
 
     override val layoutId = R.layout.activity_news_detail
 

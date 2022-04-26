@@ -2,6 +2,7 @@ package com.app.newspractical.ui.news_list
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.newspractical.BR
 import com.app.newspractical.R
@@ -90,11 +91,13 @@ class NewsListActivity : BaseActivity<ActivityNewsListBinding, NewsListViewModel
         val intent = Intent(this, NewsDetailActivity::class.java)
         intent.putExtra("data", data)
         startActivity(intent)
+        Log.e("tag act",data.toString())
     }
 
     override fun onLinkClick(data: String) {
         val intent = Intent(this, WebviewActivity::class.java)
         intent.putExtra("link", data)
         startActivity(intent)
+        Log.e("tag act",data)
     }
 }

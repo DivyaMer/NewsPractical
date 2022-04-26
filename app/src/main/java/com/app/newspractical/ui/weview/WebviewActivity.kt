@@ -1,6 +1,7 @@
 package com.app.newspractical.ui.weview
 
 import android.os.Bundle
+import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.app.newspractical.BR
@@ -22,7 +23,15 @@ class WebviewActivity : BaseActivity<ActivityWebviewBinding, WebviewViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        url = intent.extras!!.getString("link", "")
+        Log.e("tag web", url)
 
+        binding.apply {
+            webView.webViewClient = WebViewClient()
+            webView.loadUrl(url)
+            webView.settings.javaScriptEnabled = true
+            webView.settings.setSupportZoom(true)
+        }
     }
 
     override fun setUpObserver() {
@@ -30,24 +39,5 @@ class WebviewActivity : BaseActivity<ActivityWebviewBinding, WebviewViewModel>()
 
     override fun init() {
 
-        val bundle = intent.extras
-        if (bundle != null) {
-
-            url = bundle.getString("url","")
-        }
-            binding.apply {
-            // WebViewClient allows you to handle
-            // onPageFinished and override Url loading.
-            webView.webViewClient = WebViewClient()
-
-            // this will load the url of the website
-            webView.loadUrl(url)
-
-            // this will enable the javascript settings
-            webView.settings.javaScriptEnabled = true
-
-            // if you want to enable zoom feature
-            webView.settings.setSupportZoom(true)
-        }
     }
 }
