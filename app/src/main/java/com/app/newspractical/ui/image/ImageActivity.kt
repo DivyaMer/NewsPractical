@@ -7,7 +7,6 @@ import com.app.newspractical.BR
 import com.app.newspractical.R
 import com.app.newspractical.base.BaseActivity
 import com.app.newspractical.databinding.ActivityImageBinding
-import com.app.newspractical.databinding.ActivityImageBindingImpl
 import com.app.newspractical.databinding.ActivityNewsDetailBinding
 import com.app.newspractical.ktx.loadImage
 import com.app.newspractical.ui.news_list.NewsListViewModel
